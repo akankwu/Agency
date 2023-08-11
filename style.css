@@ -1,0 +1,199 @@
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: rgb(40, 167, 199);
+  color: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header a h1:hover {
+ background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#abt {
+  margin-right: 10px;
+}
+
+nav {
+  float: right;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+nav a:hover {
+  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+main {
+  margin-top: 20px;
+  background-image: url(resized.jpg);
+  background-repeat: no-repeat;
+  border-radius: 3px;
+}
+
+section {
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  background-color: rgb(40, 167, 199);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+#form {
+  display: grid;
+  gap: 2.5px;
+  
+}
+
+.form {
+  width: 300px;
+  text-align: center;
+}
+
+.form:hover {
+  color: rgb(77, 98, 190);
+}
+
+#text {
+  height: 100px;
+}
+
+#bnt {
+  width: 200px;
+}
+
+#myBtn {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  /* background-color: transparent; Set a background color */
+  /* color: white; Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 70px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  border-color: rgb(40, 167, 199);
+}
+
+#myBtn:hover {
+  zoom: 5px;
+}
+
+#about,
+#contact {
+  background: -webkit-linear-gradient(rgb(10, 10, 10), rgb(77, 98, 190));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#services {
+  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#home,
+#con p{
+  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+#about {
+  margin-top: 30px;
+}
+
+
+
+#val img {
+  
+  border-radius: 3px;
+  width: 2000px;
+  height: 373px;
+  display: block;
+  margin-top: 25px;  
+  
+}
+
+hr {
+  color: rgb(40, 167, 199);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  nav {
+    float: none;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #about,
+  #contact {
+    margin-top: 0;
+  }
+
+  #val img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#con a img {
+    width: 80px;
+}
+
+#con a p img {
+     width: 80px;
+     padding: 50px;
+}
+
+header a img {
+    width: 100px;
+}
