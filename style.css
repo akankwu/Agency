@@ -22,6 +22,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.menu-toggle,
+.sidebar {
+  display: none;
+}
+
 img {
   text-align: left;
   width: 5rem;
