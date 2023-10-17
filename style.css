@@ -1,93 +1,676 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: #fff;
-}
-
-header {
-  background-color: rgb(40, 167, 199);
-  color: #fff;
-  padding: 20px;
-  border-radius: 3px;
-  
-}
-
-header a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header a h1:hover {
- background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-}
-
-h1 {
-  font-size: 2em;
-}
-
-#abt {
-  margin-right: 10px;
-}
-
-nav {
-  float: right;
-  
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
-
-
-
-nav a:hover {
-  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-}
-
-main {
-  margin-top: 20px;
+  overflow-x: hidden;
   background-image: url(resized.jpg);
   background-repeat: no-repeat;
-  border-radius: 3px;
+  background-size: cover;
+  background-position: center;
+  font-family: poppins, sans-serif;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
 }
 
-section {
-  padding: 20px;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 img {
-  max-width: 100%;
+  text-align: left;
+  width: 5rem;
+  position: absolute;
+  margin-left: 10px;
 }
 
-footer {
+.menu-bar .logoname {
+  position: absolute;
+  margin-left: 5.3rem;
+  margin-top: 1.4rem;
+  font-weight: bolder;
+  font-size: 2.3rem;
+}
+
+.menu-bar {
   background-color: rgb(40, 167, 199);
-  color: #fff;
-  padding: 20px;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: inline-block;
+  width: 100%;
+}
+
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  margin-left: 700px;
   text-align: center;
+}
+
+.menu-bar ul li {
+  width: 120px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.menu-bar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu-bar ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.active,
+.menu-bar ul li:hover {
+  background: rgba(8, 101, 124, 0.565);
   border-radius: 3px;
 }
 
-#form {
-  display: grid;
-  gap: 2.5px;
-  
+.sub-menu {
+  display: none;
+
 }
 
-.form {
-  width: 300px;
+.menu-bar ul li:hover .sub-menu {
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.911);
+  margin-top: 15px;
+  margin-left: -40px;
+  border-radius: 10PX;
+
+
+}
+
+.menu-bar ul li:hover .sub-menu ul {
+  display: block;
+  margin: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.waviy {
+  position: relative;
+  margin-top: 10rem;
   text-align: center;
 }
 
-.form:hover {
-  color: rgb(77, 98, 190);
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
 }
 
-#text {
-  height: 100px;
+@keyframes flip {
+
+  0%,
+  80% {
+    transform: rotateY(360deg)
+  }
+}
+
+.wel {
+  position: relative;
+  margin-top: 6rem;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 5rem;
+}
+
+.free {
+  display: inline-block;
+  position: relative;
+  margin-top: 2rem;
+  /* text-align: left; */
+  /* font-size: 15px; */
+  margin-left: 5rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+
+}
+
+
+.free a {
+  color: #eee;
+  text-decoration: none;
+  background-color: rgb(40, 167, 199);
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  /* border-width: 5000px; */
+}
+
+.free:hover {
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+
+}
+
+.sub-menu {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.sub-menu:hover {
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.2);
+}
+
+.main-body {
+  position: relative;
+  margin-top: 6rem;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 5rem;
+
+}
+
+.main-body ul {
+  display: inline-flex;
+}
+
+.main-body ul li {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.main-body ul li .title {
+  margin-left: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about a p,
+.about a {
+  text-decoration: none;
+  margin-left: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+hr.class-1 {
+  border: none;
+  border-top: 2px solid #131111;
+  width: 95%;
+
+}
+
+.clients {
+  background-image: url(500.png);
+  background-repeat: no-repeat;
+  width: 472px;
+  height: 162px;
+  margin-left: 20rem;
+}
+
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+
+/* Style each of the sides 
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+
+/* Add animation to the slides */
+.slide-wrapper {
+
+  /* Calculate the total width on the
+  basis of number of slides */
+  width: calc(728px * 4);
+
+  /* Specify the animation with the
+  duration and speed */
+  animation: slide 10s ease infinite;
+}
+
+/* Set the background color
+of each of the slides */
+.slide:nth-child(1) {
+  background-image: url(img1.png);
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(2) {
+  background-image: url(img2.png);
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(3) {
+  background-image: url(img3.png);
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(4) {
+  background-image: url(img4.png);
+  background-repeat: no-repeat;
+}
+
+/* Define the animation 
+for the slideshow */
+@keyframes slide {
+
+  /* Calculate the margin-left for 
+  each of the slides */
+  20% {
+    margin-left: 0px;
+  }
+
+  40% {
+    margin-left: calc(-728px * 1);
+  }
+
+  60% {
+    margin-left: calc(-728px * 2);
+  }
+
+  80% {
+    margin-left: calc(-728px * 3);
+  }
+}
+
+.values {
+  background-image: url(clients.png);
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 400px;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+  padding: 4rem;
+}
+
+.form {
+  overflow-y: scroll;
+  background-image: url(top.jpg);
+  opacity: 0.5;
+  width: 95%;
+  height: 40rem;
+  border-radius: 5px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
+
+}
+
+.form::-webkit-scrollbar {
+  display: none;
+}
+
+.form .f1 {
+  text-align: center;
+  display: inline-block;
+  height: 3rem;
+  width: 45%;
+  margin-left: 2.5rem;
+  margin-top: 9rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+input:hover,
+textarea:hover,
+button:hover {
+  -webkit-transform: scale(1.2);
+  /* Safari 3-8 */
+  transform: scale(1.03);
+}
+
+.form .f2 {
+  text-align: center;
+  display: inline-block;
+  height: 3rem;
+  width: 94%;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.form .f3 {
+  text-align: center;
+  display: inline-block;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.form .f4 {
+  text-align: center;
+  display: inline-block;
+  height: 13rem;
+  width: 94%;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.form .f5 {
+  background-color: rgb(40, 167, 199);
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  height: 3rem;
+  width: 10%;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.form p {
+  text-align: center;
+  margin-top: 5rem;
+  font-weight: bold;
+}
+
+.con h1 {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 7rem;
+  margin-left: 5rem;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.foot {
+  background-color: #333;
+  width: 95%;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: antiquewhite;
+  padding: 5px;
+}
+
+.foot ul li p {
+  margin-top: 5px;
+}
+
+.foot .color {
+  color: antiquewhite;
+}
+
+.foot a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+h1,
+h2,
+h3,
+span {
+  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.footer {
+  background-color: #0f0f0f;
+  width: 95%;
+  height: 10rem;
+  color: antiquewhite;
+  padding: 60px;
+  text-align: center;
+  font-size: small;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.footc {
+  /* margin-left: 5rem; */
+  background-color: #333;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5rem;
+  color: antiquewhite;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.footc ul li p {
+  margin-top: 5px;
+}
+
+.footc .color {
+  color: antiquewhite;
+}
+
+.footc a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+.abouta a p,
+.abouta a {
+  text-align: center;
+  text-decoration: none;
+  margin-left: 5rem;
+  font-weight: bolder;
+  font-size: 5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.abouta p {
+  text-align: center;
+  text-decoration: none;
+  margin-left: 5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footera {
+  background-color: #0f0f0f;
+  width: 89%;
+  height: 10rem;
+  color: antiquewhite;
+  padding: 60px;
+  text-align: center;
+  font-size: small;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 5rem;
+}
+
+.forma {
+  background-color: rgb(40, 167, 199);
+  opacity: 0.5;
+  width: 89%;
+  height: 100%;
+  border-radius: 5px;
+  margin-left: 5rem;
+
+
+}
+
+.forma .f1 {
+  text-align: center;
+  display: inline-block;
+  height: 3rem;
+  width: 45%;
+  margin-left: 2.5rem;
+  margin-top: 9rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.forma .f2 {
+  text-align: center;
+  display: inline-block;
+  height: 3rem;
+  width: 94%;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.forma .f3 {
+  text-align: center;
+  display: inline-block;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.forma .f4 {
+  text-align: center;
+  display: inline-block;
+  height: 13rem;
+  width: 94%;
+  margin-left: 2.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.forma .f5 {
+  color: rgb(40, 167, 199);
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  height: 3rem;
+  width: 10%;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  padding: 10px;
+}
+
+.forma p {
+  padding: 5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+/* Add this CSS to style the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: rgb(40, 167, 199);
+  transition: 0.3s ease;
+  z-index: 2;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Style the menu toggle button */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 3;
 }
 
 #bnt {
@@ -95,18 +678,28 @@ footer {
 }
 
 #myBtn {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 30px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 30px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
   /* background-color: transparent; Set a background color */
   /* color: white; Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 70px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 70px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
   border-color: rgb(40, 167, 199);
 }
 
@@ -114,86 +707,16 @@ footer {
   zoom: 5px;
 }
 
-#about,
-#contact {
-  background: -webkit-linear-gradient(rgb(10, 10, 10), rgb(77, 98, 190));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-#services {
-  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#home,
-#con p{
-  background: -webkit-linear-gradient(rgb(77, 98, 190), rgb(10, 10, 10));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-#about {
-  margin-top: 30px;
-}
-
-
-
-#val img {
-  
-  border-radius: 3px;
-  width: 2000px;
-  height: 373px;
-  display: block;
-  margin-top: 25px;  
-  
-}
-
-hr {
-  color: rgb(40, 167, 199);
-}
-
+/* Media query for mobile view */
 @media (max-width: 768px) {
-  main {
-    padding: 0;
+  .menu-bar ul {
+    display: none;
+    /* Hide the original menu for mobile */
   }
 
-  header {
-    padding: 10px;
+  .sidebar {
+    right: 0;
+    /* Slide in from the left for mobile */
   }
-
-  nav {
-    float: none;
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  #about,
-  #contact {
-    margin-top: 0;
-  }
-
-  #val img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-#con a img {
-    width: 80px;
-}
-
-#con a p img {
-     width: 80px;
-     padding: 50px;
-}
-
-header a img {
-    width: 100px;
 }
