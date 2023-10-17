@@ -22,10 +22,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.menu-toggle {
-  display: none;
-}
-
 img {
   text-align: left;
   width: 5rem;
@@ -636,42 +632,6 @@ span {
   font-size: 3rem;
 }
 
-/* Add this CSS to style the sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  /* Initially hidden off-screen */
-  width: 250px;
-  height: 100%;
-  background-color: rgb(40, 167, 199);
-  transition: 0.3s ease;
-  z-index: 2;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 10px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: white;
-}
-
-/* Style the menu toggle button */
-.menu-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 3;
-}
 
 #bnt {
   width: 200px;
@@ -710,6 +670,45 @@ span {
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
+
+  /* Add this CSS to style the sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* Initially hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: rgb(40, 167, 199);
+    transition: 0.3s ease;
+    z-index: 2;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 10px;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Style the menu toggle button */
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+
   .menu-bar ul {
     display: none;
     /* Hide the original menu for mobile */
