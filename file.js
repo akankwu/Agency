@@ -17,12 +17,14 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// Add this JavaScript to toggle the sidebar
+//Add this JavaScript to toggle the sidebar
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
-  if (sidebar.style.right === '0px') {
-    sidebar.style.right = '-250px'; // Hide the sidebar
+  if (sidebar.style.display === 'block') {
+    sidebar.style.display = 'none'; // Hide the sidebar
   } else {
-    sidebar.style.right = '0px'; // Show the sidebar
+    sidebar.style.display = 'block'; // Show the sidebar
   }
+
+
 }

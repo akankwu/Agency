@@ -9,129 +9,104 @@
     <link rel="icon" type="image/x-icon" href="logo (1).ico">
     <link rel="stylesheet" href="style.css">
     <script src="file.js"></script>
+    <style>
+        .menu-toggle {
+            right: 1rem;
+        }
+
+        .sidebar {
+            right: 12px;
+            width: 10rem;
+            height: 35%;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Add this button to toggle the sidebar -->
-    <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
-    <div class="sidebar">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li>
-                <a href="index.html">SERVICES</a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="licensing.html">
-                                <p>LICENSING SERVICE</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>BUILDING MAINTENANACE</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>EXPORT/IMPORT DOCUMENTS</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>INCORPORATION</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>TRAVEL DOCUMENTS</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>STAY IN INDONESIA</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>HOUSING PURCHASE/</p>
-                                <p>RENTALS</p>
-                            </a></li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-        </ul>
-    </div>
-
     <div class="menu-bar">
+
         <a href="index.html">
             <img src="logo.png" alt="company logo">
         </a>
         <span class="logoname"><a href="index.html">LEGAL PAPERS INTERNATIONAL</a></span>
-        <ul>
-            <li><a href="index.html">
-                    <p>HOME</p>
-                </a></li>
-            <li><a href="index.html">
-                    <p>SERVICES</p>
-                </a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="licensing.html">
-                                <p>LICENSING SERVICE</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>BUILDING MAINTENANACE</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>EXPORT/IMPORT DOCUMENTS</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>INCORPORATION</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>TRAVEL DOCUMENTS</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>STAY IN INDONESIA</p>
-                            </a></li>
-                        <li><a href="#">
-                                <p>HOUSING PURCHASE/</p>
-                                <p>RENTALS</p>
-                            </a></li>
-                    </ul>
-                </div>
-
-            </li>
-            <li><a href="contact.html">
-                    <p>CONTACT</p>
-                </a></li>
-            <li class="active"><a href="about.html">
-                    <p>ABOUT US</p>
-                </a></li>
-        </ul>
+        <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">
+                        <p>HOME</p>
+                    </a></li>
+                <li><a href="index.html">
+                        <p>SERVICES</p>
+                    </a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="licensing.html">
+                                    <p>LICENSING SERVICE</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>BUILDING MAINTENANACE</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>EXPORT/IMPORT DOCUMENTS</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>INCORPORATION</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>TRAVEL DOCUMENTS</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>STAY IN INDONESIA</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <p>HOUSING PURCHASE/</p>
+                                    <p>RENTALS</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html">
+                        <p>CONTACT</p>
+                    </a></li>
+                <li class="active"><a href="about.html">
+                        <p>ABOUT US</p>
+                    </a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="abouta">
-        <a href="#">
-            <p>ABOUT US</p>
-        </a>
-        <p>Legal Papers International was established in 2019 and helps clients who</p>
-        <br>
-        <p>want to expand or establish a business in Indonesia. We have</p>
-        <br>
-        <p>been providing services to several local and multinational</p>
-        <br>
-        <p>companies.</p>
-        <br><br>
-        <p>Assisted by our professional team, who are years-experienced</p>
-        <br>
-        <p>on functional practices such as legal, tax, accounting,</p>
-        <br>
-        <p>recruitment, product registration, business license and</p>
-        <br>
-        <p>working permits. Your business in anywherein the world which</p>
-        <br>
-        <p>starts from just a plan, will transform into a reality.</p>
-        <br><br>
-        <p>Our knowledge in development, regulations, and market</p>
-        <br>
-        <p>trends, in multiple industries, leads us to develop a</p>
-        <br><br>
-        <p>customized strategy. Alongside clients, we give solutions for</p>
-        <br>
-        <p>every ever-changing regulation in Indonesia.</p>
-        <br><br>
-        <p>As we are guided by our values, we commit to always put our</p>
-        <p>clients, our people and our communities first.</p>
+        <p class="title">ABOUT US</p>
+        <div class="body">
+            <p>Legal Papers International was established in 2019 and helps clients who</p>
+            <br>
+            <p>want to expand or establish a business in Indonesia. We have</p>
+            <br>
+            <p>been providing services to several local and multinational</p>
+            <br>
+            <p>companies.</p>
+            <br><br>
+            <p>Assisted by our professional team, who are years-experienced</p>
+            <br>
+            <p>on functional practices such as legal, tax, accounting,</p>
+            <br>
+            <p>recruitment, product registration, business license and</p>
+            <br>
+            <p>working permits. Your business in anywherein the world which</p>
+            <br>
+            <p>starts from just a plan, will transform into a reality.</p>
+            <br><br>
+            <p>Our knowledge in development, regulations, and market</p>
+            <br>
+            <p>trends, in multiple industries, leads us to develop a</p>
+            <br><br>
+            <p>customized strategy. Alongside clients, we give solutions for</p>
+            <br>
+            <p>every ever-changing regulation in Indonesia.</p>
+            <br><br>
+            <p>As we are guided by our values, we commit to always put our</p>
+            <p>clients, our people and our communities first.</p>
+        </div>
 
     </div>
 
@@ -157,7 +132,6 @@
     <div class="footera">
         <p>© 2023 LEGAL PAPERS INTERNATIONAL</p>
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
 </body>
 
 </html>

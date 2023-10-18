@@ -6,10 +6,6 @@
 
 body {
   overflow-x: hidden;
-  background-image: url(resized.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   font-family: poppins, sans-serif;
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -22,10 +18,17 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.menu-toggle,
-.sidebar {
-  display: none;
+section {
+  background-image: url(resized.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+.menu-toggle {
+  opacity: 0;
+}
+
 
 img {
   text-align: left;
@@ -53,25 +56,20 @@ img {
   width: 100%;
 }
 
-.menu-bar ul {
+.menu-bar .sidebar ul {
   display: inline-flex;
   list-style: none;
   margin-left: 700px;
   text-align: center;
 }
 
-.menu-bar ul li {
+.menu-bar .sidebar ul li {
   width: 120px;
   margin: 15px;
   padding: 15px;
 }
 
-.menu-bar ul li a {
-  color: black;
-  text-decoration: none;
-}
-
-.menu-bar ul li a {
+.menu-bar .sidebar ul li a {
   color: black;
   text-decoration: none;
 }
@@ -111,21 +109,43 @@ img {
   text-align: center;
 }
 
-.waviy span {
+.waviy1 span {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i));
+  margin-bottom: 1rem;
+}
+
+.waviy2 span {
   position: relative;
   display: inline-block;
   font-size: 30px;
   color: #0f0f0f;
   text-transform: uppercase;
-  animation: flip 2s infinite;
-  animation-delay: calc(.2s * var(--i))
+  animation: flip 2.1s infinite;
+  animation-delay: calc(.2s * var(--i));
+  margin-bottom: 1rem;
+}
+
+.waviy3 span {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  color: #0f0f0f;
+  text-transform: uppercase;
+  animation: flip 2.2s infinite;
+  animation-delay: calc(.2s * var(--i));
 }
 
 @keyframes flip {
 
   0%,
   80% {
-    transform: rotateY(360deg)
+    transform: rotateX(360deg)
   }
 }
 
@@ -152,10 +172,12 @@ img {
 
 }
 
-
 .free a {
-  color: #eee;
   text-decoration: none;
+}
+
+.free a p {
+  color: #eee;
   background-color: rgb(40, 167, 199);
   font-size: 15px;
   padding: 10px;
@@ -208,9 +230,15 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.about a p,
-.about a {
-  text-decoration: none;
+.about {
+  position: relative;
+  margin-top: 6rem;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 5rem;
+}
+
+.about .title {
   margin-left: 5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -219,16 +247,18 @@ img {
 hr.class-1 {
   border: none;
   border-top: 2px solid #131111;
-  width: 95%;
+  width: 100%;
 
 }
 
+
+
 .clients {
-  background-image: url(500.png);
-  background-repeat: no-repeat;
-  width: 472px;
-  height: 162px;
-  margin-left: 20rem;
+  position: relative;
+  width: 100%;
+  left: 1rem;
+  top: 3rem;
+  padding: 4rem;
 }
 
 #slideshow {
@@ -242,7 +272,7 @@ hr.class-1 {
 with a fixed width and height */
 .slide {
   float: left;
-  height: 510px;
+  height: 280px;
   width: 728px;
 }
 
@@ -304,12 +334,8 @@ for the slideshow */
 }
 
 .values {
-  background-image: url(clients.png);
-  background-repeat: no-repeat;
-  width: 95%;
-  height: 400px;
-  margin-left: 10rem;
-  margin-bottom: 5rem;
+  position: relative;
+  width: 100%;
   padding: 4rem;
 }
 
@@ -373,8 +399,8 @@ button:hover {
 }
 
 .form .f3 {
-  text-align: center;
-  display: inline-block;
+  text-align: left;
+  display: block;
   margin-left: 2.5rem;
   margin-top: 3rem;
   border-radius: 5px;
@@ -446,7 +472,7 @@ button:hover {
 }
 
 .foot ul li p {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .foot .color {
@@ -505,10 +531,8 @@ span {
   color: antiquewhite;
 }
 
-.abouta a p,
-.abouta a {
+.abouta .title {
   text-align: center;
-  text-decoration: none;
   margin-left: 5rem;
   font-weight: bolder;
   font-size: 5rem;
@@ -516,7 +540,7 @@ span {
   margin-bottom: 5rem;
 }
 
-.abouta p {
+.abouta .body {
   text-align: center;
   text-decoration: none;
   margin-left: 5rem;
@@ -672,55 +696,308 @@ span {
   zoom: 5px;
 }
 
+/* Add responsive styles for mobile and tablet views */
+@media screen and (max-width: 768px) {
+  .menu-bar {
+    background-color: rgb(40, 167, 199);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+  }
 
-/* Media query for mobile view */
-@media (max-width: 768px) {
+  img {
+    text-align: left;
+    width: 3rem;
+    position: relative;
+    margin-left: 6px;
+    margin-top: 1.4rem;
+  }
 
-  /* Add this CSS to style the sidebar */
+  .menu-bar .logoname {
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 3rem;
+    font-weight: bolder;
+    font-size: .6rem;
+  }
+
+  .menu-toggle {
+    position: fixed;
+    position: -webkit-fixed;
+    top: 35px;
+    right: 190px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 100%;
+  }
+
+
   .sidebar {
     position: fixed;
     top: 0;
-    right: -250px;
-    /* Initially hidden off-screen */
-    width: 250px;
-    height: 100%;
+    right: 170px;
+    width: 10rem;
+    height: 25%;
     background-color: rgb(40, 167, 199);
-    transition: 0.3s ease;
+    transition: 1s ease;
     z-index: 2;
+    opacity: 100%;
+    display: none;
   }
 
-  .sidebar ul {
+  .menu-bar .sidebar ul {
+    position: relative;
+    display: inline-block;
+    margin-left: -1rem;
     list-style: none;
     padding: 0;
   }
 
-  .sidebar ul li {
+  .menu-bar .sidebar ul li {
     padding: 10px;
   }
 
-  .sidebar a {
+  .menu-bar .sidebar ul li a {
     text-decoration: none;
     color: white;
   }
 
-  /* Style the menu toggle button */
-  .menu-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 3;
+  .waviy {
+    position: relative;
+    margin-top: 4rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .waviy1 span,
+  .waviy2 span {
+    font-weight: bolder;
+    font-size: 20px;
+
+  }
+
+  .waviy3 span {
+    font-weight: bolder;
+    font-size: 15px;
+
+  }
+
+  .wel {
+    position: relative;
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 13px;
+    margin-left: 2rem;
+    margin-bottom: 0rem;
   }
 
 
-  .menu-bar ul {
+  .free {
+    display: inline;
+    left: 2rem;
+
+
+  }
+
+  .free a p {
+    width: 10rem;
+    color: #eee;
+    background-color: rgb(40, 167, 199);
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .main-body {
+    text-align: left;
+    font-size: 8px;
+    margin-left: 1rem;
+    font-weight: 500;
+  }
+
+  .main-body ul {
+    display: block;
+  }
+
+  .main-body ul li .title {
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about {
+    text-align: left;
+    font-size: 8px;
+    margin-left: 2rem;
+    font-weight: 500;
+  }
+
+  .about .title {
+    left: 20rem;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+  }
+
+  .clients {
+    width: 100%;
+    left: 0;
+    top: 2px;
+    padding: 4px;
+  }
+
+  .values {
+    position: relative;
+    width: 150%;
+    padding: 4rem;
+    right: 5.5rem;
+  }
+
+  .form {
+    background-color: rgb(40, 167, 199);
+    opacity: 0.5;
+    width: 89%;
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 1rem;
+    background-image: url();
+  }
+
+  .form .f1 {
+    display: inline-block;
+    height: 2.5rem;
+    width: 100px;
+    margin-left: 1.7rem;
+    margin-top: 3rem;
+    border: none;
+  }
+
+
+
+  .form .f2 {
+    text-align: center;
+    display: inline-block;
+    height: 2.5rem;
+    width: 81%;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+  }
+
+  .form .f3 {
+
+    margin-left: 1.7rem;
+    margin-top: 10px;
+  }
+
+  .form .f4 {
+    height: 5rem;
+    text-align: center;
+    display: inline-block;
+    width: 81%;
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+  }
+
+  .form .f5 {
+    background-color: black;
+    color: antiquewhite;
+    height: 2rem;
+    width: 6rem;
+    margin-left: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form p {
+    margin-top: 3rem;
+  }
+
+  #myBtn {
+
+    right: 13rem;
+  }
+
+  #slideshow {
+    width: 80%;
+    height: 500px;
+    margin-right: 8rem;
+  }
+
+  .foot {
+    background-color: #333;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: antiquewhite;
+    padding: 5px;
+  }
+
+  .footer {
+    background-color: #0f0f0f;
+    width: 100%;
+    height: 10px;
+    color: antiquewhite;
+    padding: 60px;
+    text-align: center;
+    font-size: small;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .con h1 {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-left: 0;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .abouta .title {
+    color: blue;
+    text-align: center;
+    margin-left: 0;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .abouta .body {
+    font-size: 10px;
+    text-align: left;
+    margin-left: .4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+  }
+
+  .footera {
+    background-color: #0f0f0f;
+    width: 100%;
+    height: 1rem;
+    color: antiquewhite;
+    padding: 60px;
+    text-align: center;
+    font-size: small;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .forma {
+    background-color: rgb(40, 167, 199);
+    opacity: 0.5;
+    width: 89%;
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 5rem;
     display: none;
-    /* Hide the original menu for mobile */
+
   }
 
-  .sidebar {
-    right: 0;
-    /* Slide in from the left for mobile */
-  }
+
 }
