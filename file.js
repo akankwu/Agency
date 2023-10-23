@@ -28,3 +28,15 @@ function toggleSidebar() {
 
 
 }
+
+
+function reportWindowSize() {
+  //check if the viweport size is less then 1200px
+  if (window.innerWidth < 1200) {
+
+    var dis = document.getElementById('dis').innerHTML = alert("Dear user, this website may be complex or distotred to display on mobile device due to an ongoing maintenance but all functions works fine. Please use a desktop for a better display. Thank you");
+
+  };
+}
+
+window.onload = reportWindowSize;
